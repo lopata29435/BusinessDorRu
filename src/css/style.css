@@ -401,3 +401,64 @@ body{
     border-radius: 8px;
     font-size: 16px;   
 }
+
+.footer_data{
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+}
+
+.footer_data_1{
+    display: flex;
+    flex-direction: column;
+    row-gap: px;
+}
+
+.footer_sub_data_1{
+    color:#7953c3;
+    font-family: "MuseoSansCyrl700";
+}
+
+.footer_sub_data_2{
+    color: #5d5b66;
+    font-family: "MuseoSansCyrl500";
+}
+
+.footer_data_2{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.footer_sub_data_3{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    color: #040013;
+    font-family: "MuseoSansCyrl500";
+    font-size: 16px;
+}
+
+.media_icons{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.polosochka_blyat{
+    border: 1px solid #e4ddf3;
+    width: 100%;
+}
+
+.copyright{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.copyright_text{
+    color: #aaa;
+    font-family: "MuseoSansCyrl500";
+    font-size: 14px;
+}
