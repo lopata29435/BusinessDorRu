@@ -155,7 +155,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 8%;
+    width: 40%;
     background-color: #d9d1e0;
     height: 2px;
 }
@@ -171,62 +171,63 @@ body{
 .profile_create_constructor{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     gap: 60px;
     width: 100%;
 }
 
-.profile_create_data_upload{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.profile_create_constructor_form{
     display: flex;
     flex-direction: column;
     gap: 24px;
-    font-family: "MuseoSansCyrl700";  
-    font-size: 14px;
 }
 
-.upload_photo{
-    height: 150px;
-    width: 366px;
-    padding: 40px 29px;
-    gap: 0;
+.radio_input{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px dashed #cdbddb;
-    border: 1px dashed var(--d-9-d-1-e-0-stroke,#cdbddb);
-    border-radius: 16px;   
-}
-
-.label_photo_upload{
     gap: 16px;
+}
+
+.radio_input_tog{
+    display: flex;
+    gap: 8px;
+    font-family: "MuseoSansCyrl500";
+    color:#040013;
+    font-size: 14px;
+}
+
+.profile_create_constructor_education{
     display: flex;
     flex-direction: column;
+    font-family: "MuseoSansCyrl500";
+    gap: 24px;
+}
+
+.multi_choise{
+    margin-top: 4px;
+    padding: 8px;
+    gap: 16px;
+    background-color: #f4f4f6;
+    border-radius: 8px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.one_choise{
+    padding: 8px 14px;
     align-items: center;
-    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
-.upload_photo_button{
-    background-color: #7953c3;
-    border: 0px;
-    border-radius:8px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 8px 40px;
-    width: 144px;
-}
-
-.upload_text_style{
-    font-size: 16px; 
-    color: #aaa; 
-    font-family: "MuseoSansCyrl300";
-    font-weight: 300; 
-    font-size: 14px; 
+.already_done{
+    margin-top: 9px;
+    padding: 0 0 0 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
 }
 
 .text_input{
@@ -261,11 +262,6 @@ body{
     overflow-wrap: normal;
     padding: 16px 12px;
     width: 366px;   
-}
-
-.radio_input{
-    font-family: "MuseoSansCyrl500";
-    font-weight: 500;
 }
 
 .profile_create_card{

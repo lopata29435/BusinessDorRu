@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src\css\style.css">
+    <link rel="stylesheet" href="src\css\style2.css">
     <title>Hw_1</title>
 </head>
 <body>
@@ -19,12 +19,12 @@
             <div class = "main_body">
                 <div class = "registration_form">
                     <div class = "profile_create_header">
-                        <button class="on_main_button">На главную</button>
+                        <button class="on_main_button">Назад</button>
                         <div class = "profile_create_header_title">
                             <h3 class="header_3_style">Создание профиля</h3>
                             <div class = "profile_create_header_sub_title">
                                 <p class = "sub_title_header_3_style">/</p>
-                                <p class = "sub_title_header_3_style">О себе</p>
+                                <p class = "sub_title_header_3_style">Образование</p>
                             </div>
                         </div>
                         <div class = "profile_create_header_progress_line">
@@ -33,43 +33,71 @@
                     </div>
                     
                     <div class = "profile_create_constructor">
-                        <div class = "profile_create_data_upload">
-                            <div class = "upload_photo">
-                                <label for = "photo_input" class = "label_photo_upload">
-                                    <p style = "font-size: 16px; color: #040013;">Аватар профиля</p>
-                                    <!-- тут должен быть <input> но я не знаю как сдлать чтобы он отображался как у вас(((( -->
-                                    <button class = "upload_photo_button">Загрузить</button>
-                                    <p class = "upload_text_style">Загрузите фотографию весом не более 10 мб</p>
-                                </label>
+                        
+                        <div class = "profile_create_constructor_form">
+                            <div class = "radio_input">
+                                <div class = "radio_input_tog">
+                                    <input id="STUDENT" type="radio" name="accountType" value="STUDENT">
+                                    <label for="STUDENT">Студент / выпускник</label>
+                                </div>
+                                <div class = "radio_input_tog">
+                                    <input id="EMPLOYEE" type="radio" name="accountType" value="EMPLOYEE">
+                                    <label for="EMPLOYEE">Сотрудник</label>
+                                </div>
                             </div>
-                            <div class = "text_input">
-                                <label for="name" class="label_input_data">Имя и фамилия</label>
-                                <input name="name" id="name" class="input_data_style" type="text">
-                                <div style = "display: flex; flex-direction: row;">
-                                    <div class="radio_input">
-                                        <input id="MAN" class="RadioInput_item__oLFuV" type="radio" name="gender" value="MAN">
-                                        <label for="MAN">Парень</label>
+                            <div>
+                                <div class = "profile_create_constructor_education">
+                                    <div>
+                                        <p style = "color: #5d5b66; font-size: 14px;">Курс</p>
+                                        <div class="multi_choise">
+                                            <label class="one_choise" style = "background-color: #7953c3; border-radius: 8px; color: #fff;">
+                                                <input name="educationLevel" type="radio" value="1" style = "display: none;">1
+                                            </label>
+                                            <label class="one_choise">
+                                                <input name="educationLevel" type="radio" value="2" style = "display: none;">2
+                                            </label>
+                                            <label class="one_choise">
+                                                <input name="educationLevel" type="radio" value="3" style = "display: none;">3
+                                            </label>
+                                            <label class="one_choise">
+                                                <input name="educationLevel" type="radio" value="4" style = "display: none;">4
+                                            </label>
+                                            <label class="one_choise">
+                                                <input name="educationLevel" type="radio" value="5" style = "display: none;">5
+                                            </label>
+                                            <label class="one_choise">
+                                                <input name="educationLevel" type="radio" value="6" style = "display: none;">6
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="already_done">
+                                                <input name="educationLevel" type="radio" value="7" style="display: none;">
+                                                <div class="MultipleFormFilter_single_checkbox__qv9Cx">
+                                                    <img src="src/icons/Rectangle.svg" alt="mark_icon">
+                                                </div>Уже окончил Вышку
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="radio_input">
-                                        <input id="WOMAN" class="RadioInput_item__oLFuV" type="radio" name="gender" value="WOMAN">
-                                        <label for="WOMAN">Девушка</label>
+                                    <div class="text_input">
+                                        <label for="name" class="label_input_data">Ступень образования</label>
+                                        <input name="name" id="name" class="input_data_style" type="text">
+                                    </div>
+                                    <div class="text_input">
+                                        <label for="name" class="label_input_data">Факультет</label>
+                                        <input name="name" id="name" class="input_data_style" type="text">
+                                    </div>
+                                    <div class="text_input">
+                                        <label for="name" class="label_input_data">Образовательная программа</label>
+                                        <input name="name" id="name" class="input_data_style" type="text">
+                                    </div>
+                                    <div class="text_input">
+                                        <label for="name" class="label_input_data">Работа</label>
+                                        <input name="name" id="name" class="input_data_style" type="text">
                                     </div>
                                 </div>
                             </div>
-                            <div class = "text_input">
-                                <label for="year_of_birth" class="label_input_data">Дата рождения</label>
-                                <input name="year_of_birth" id="year_of_birth" class="input_data_style" style = "width: 160px;" type="text">
-                            </div>
-                            <div class = "text_input">
-                                <label for="phone" class="label_input_data" >Номер телефона</label>
-                                <input name="phone" id="phone" class="input_data_style" autocomplete="off" type="tel" value="">
-                            </div>
-                            <div class = "text_input">
-                                <label for="year_of_birth" class="label_input_data">О себе</label>
-                                <input name="year_of_birth" id="year_of_birth" class="input_data_style" style = "height: 120px;" type="text">
-                                <p class = "sub_title_header_3_style" style = "font-size: small;">Например: глаза уже плывут от этих скобочек и тегов</p>
-                            </div>
                         </div>
+                        
                         <div class = "profile_create_card">
                             <p style = "margin-bottom: 16px; padding-left: 16px; color: #5d5b66; font-size: 14px;">Так будет выглядеть твоя будущая страница</p>
                             <div class="profile_create_card_data">
@@ -104,13 +132,12 @@
                             <div style = "display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
                                 <div>
                                     <div class = "font_zhir">
-                                        <p style="color: #040013;">Мы совсем ничего про тебя не знаем</p>
+                                        <p style="color: #040013;">Расскажи, где ты учишься</p>
                                     </div>
-                                    <p style="color: #5d5b66; font-size: 14px;">Расскажи о себе.</p>
-                                    <p style="color: #5d5b66; font-size: 14px;">Люди пишут тем, кому доверяют. Тем более при поиске соседа</p>        
+                                    <p style="color: #5d5b66; font-size: 14px;">Часто студенты ищут соседей по схожим интересам</p>
                                 </div>    
                                 <div>
-                                    <img src = "src/icons/sad_icon.svg" alt = "sad"/>
+                                    <img src = "src/icons/fine_icon.svg" alt = "fine"/>
                                 </div>
                             </div>
                             
@@ -122,6 +149,8 @@
                 </div>     
             </div>
         </div>    
+        
+        
         <footer style = "padding: 80px 0 0; border-top: 1px solid #ebebeb; ">
                 <div style = "margin-left: 14%; margin-right: 14%; row-gap: 20px;">
                     <div class = "footer_data">
