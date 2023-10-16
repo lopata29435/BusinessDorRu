@@ -4,86 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src\css\style.css">
-    <title>Лекция 2</title>
+    <title>Hw_1</title>
 </head>
 <body>
-    <!-- Каскадность -->    
-    <div class="cascad"></div>
-
-    <!-- Селекторы -->
-    <div class="">1</div>
-    <div class="">2</div>
-    <div class="round">3</div>
-    <div class="round">4</div>
-    <div class="round" id="sun">5</div>
-
-    <!-- подключение стилей -->
+    <main>
+        <div class = "base">
+            <header class = "head">
+                <div class = "head_block">
+                    <img src = "src\img\logo.svg" alt = "logo"/>
+                    <button class = exit_button href = "vk.com">Выйти из аккаунта</button>
+                </div>
+            </header>
     
-    <!-- inline стили -->
-    <!-- <div style = "background-color: red"></div> -->
-
-    <!-- Встроенные стили -->
-    <!-- <div class=""></div>
-    <style>
-        div {
-            width: 200px;
-            height: 200px;
-            background-color: green;
-        }
-    </style> -->
-
-
-
-
-    <!-- БЭМ -->
-    <!-- <ul class="menu menu_v2">
-        <li class="memu__item">
-            <a href="" class="menu__item-link menu__item-link_active">
-                <span class="menu__item-link-text"></span>
-              </a>
-        </li>
-    </ul> -->
-
-
-
-
-    <!-- Текст -->
-    <!-- <div class="text__wrapper">
-        <p class="text_px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere cum aut nostrum. Fugit, commodi provident quibusdam voluptatibus optio incidunt natus temporibus ut similique aliquam minima sapiente aspernatur nam ducimus amet.</p>
-        <p class="text_pr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde beatae nam, sed delectus incidunt, quam blanditiis doloremque, nulla nesciunt itaque asperiores reprehenderit ex eius iure deleniti aspernatur repellat rerum totam.</p>
-        <p class="text_em"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quo sequi. Commodi itaque esse a labore minus modi rem excepturi, exercitationem impedit, numquam sapiente, nemo dolorem ipsa! Modi, eaque quo!</p>
-        <p class="text_rem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi nihil voluptate aperiam sunt ipsa voluptates veritatis nam, temporibus possimus corporis commodi pariatur repellat aut incidunt aliquid explicabo soluta molestias nostrum.</p>
-    </div> -->
-
-
-
-
-
-    <!-- Блочная модель css -->
-    <div class="block">
-        <div class="block_content"></div>
-    </div>
-
-
-
-
-    <!-- flex -->
-    <!-- <div class="flex__wrapper">
-        <div class="flex__element">1</div>
-        <div class="flex__element">2</div>
-        <div class="flex__element">3</div>
-        <div class="flex__element">4</div>
-        <div class="flex__element">5</div>
-        <div class="flex__element">6</div> 
-        <div class="flex__element">7</div>
-        <div class="flex__element">8</div>
-    </div> -->
-
-
-
-    <!-- Адаптивная верстка -->
-    <div class="adaptive"></div>
-
-    
+            <div class = "main_body">
+                <div class = "registration_form">
+                    <div class = "profile_create_header">
+                        <button class="on_main_button">На главную</button>
+                        <div class = "profile_create_header_title">
+                            <h3 class="header_3_style">Создание профиля</h3>
+                            <div class = "profile_create_header_sub_title">
+                                <p class = "sub_title_header_3_style">/</p>
+                                <p class = "sub_title_header_3_style">О себе</p>
+                            </div>
+                        </div>
+                        <div class = "profile_create_header_progress_line">
+                            <div class = "profile_create_header_progress_sub_line"></div>
+                        </div>
+                    </div>
+                    
+                    <div class = "profile_create_constructor">
+                        <div class = "profile_create_data_upload">
+                            <div class = "upload_photo">
+                                <label for = "photo_input" class = "label_photo_upload">
+                                    <p style = "font-size: 16px; color: #040013;">Аватар профиля</p>
+                                    <!-- тут должен быть <input> но я не знаю как сдлать чтобы он отображался как у вас(((( -->
+                                    <button class = "upload_photo_button">Загрузить</button>
+                                    <p class = "upload_text_style">Загрузите фотографию весом не более 10 мб</p>
+                                </label>
+                            </div>
+                            <div class = "text_input">
+                                <label for="name" class="label_input_data">Имя и фамилия</label>
+                                <input name="name" id="name" class="input_data_style" type="text">
+                                <div style = "display: flex; flex-direction: row;">
+                                    <div class="radio_input">
+                                        <input id="MAN" class="RadioInput_item__oLFuV" type="radio" name="gender" value="MAN">
+                                        <label for="MAN">Парень</label>
+                                    </div>
+                                    <div class="radio_input">
+                                        <input id="WOMAN" class="RadioInput_item__oLFuV" type="radio" name="gender" value="WOMAN">
+                                        <label for="WOMAN">Девушка</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "text_input">
+                                <label for="year_of_birth" class="label_input_data">Дата рождения</label>
+                                <input name="year_of_birth" id="year_of_birth" class="input_data_style" style = "width: 160px;" type="text">
+                            </div>
+                            <div class = "text_input">
+                                <label for="phone" class="label_input_data" >Номер телефона</label>
+                                <input name="phone" id="phone" class="input_data_style" autocomplete="off" type="tel" value="">
+                            </div>
+                            <div class = "text_input">
+                                <label for="year_of_birth" class="label_input_data">О себе</label>
+                                <input name="year_of_birth" id="year_of_birth" class="input_data_style" style = "height: 120px;" type="text">
+                                <p class = "sub_title_header_3_style" style = "font-size: small;">Например: глаза уже плывут от этих скобочек и тегов</p>
+                            </div>
+                        </div>
+                        <div class = "profile_create_card">
+                            <p style = "margin-bottom: 16px; padding-left: 16px; color: #5d5b66; font-size: 14px;">Так будет выглядеть твоя будущая страница</p>
+                            <div class="profile_create_card_data">
+                                <div class="card_photo_side">
+                                    <div class="card_photo"></div>
+                                    <button disabled="" class="card_photo_button">Показать контакты</button>
+                                </div>
+                                <div class="card_text_side">
+                                    <p style = "font-size: 16px; color: #040013;">Пётр Лопаткин</p>
+                                    <div class="card_info">
+                                        <p style="font-size: 9px; color: #040013;">Девушка</p>
+                                        <div class="kruzhok_blyat"></div>
+                                        <div>
+                                            <p style="font-size: 9px; color: #040013;">18 лет</p>
+                                        </div> 
+                                    <div class="kruzhok_blyat"></div> 
+                                    <div class="oval_blyat" style = "height: 11px; width: 120px;"></div> 
+                                </div>
+                                <div class="card_text_side_space1"></div>
+                                <div class="card_text_side_space2"></div>
+                                <div class="some_goofy_af_another_fucking_card">
+                                    <p style = "font-size: 9px;  color: #5d5b66;">Предпочтения по жилью</p>
+                                    <div class="eshe_oval_blyat"></div>
+                                    <div style="margin-top: 4px; display: flex; gap: 7px; flex-wrap: wrap;">
+                                        <div style="margin-top: 2px; background-color: #eeeef1; border-radius: 4px; width: 308px; height: 10px;"></div>
+                                    </div>
+                                    <div style = "margin-bottom: 8px; margin-top: 8px; background-color: #ccc; height: 1px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "some_advise">
+                            <div style = "display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <div class = "font_zhir">
+                                        <p style="color: #040013;">Мы совсем ничего про тебя не знаем</p>
+                                    </div>
+                                    <p style="color: #5d5b66; font-size: 14px;">Расскажи о себе.</p>
+                                    <p style="color: #5d5b66; font-size: 14px;">Люди пишут тем, кому доверяют. Тем более при поиске соседа</p>        
+                                </div>    
+                                <div>
+                                    <img src = "src/img/sad_icon.svg" alt = "sad"/>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>   
+                </div>
+                <div class = "div_next_button">
+                    <button class = "next_button">Продолжить</button>
+                </div>     
+            </div>
+            <footer>
+                
+            </footer>
+        </div>    
+    </main>   
 </body>
 </html>

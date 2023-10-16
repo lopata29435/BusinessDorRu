@@ -1,99 +1,403 @@
-.cascad {
-    width: 200px;
-    height: 200px;
-    background-color: green;
-    background-color: red;
-    background-color: rgb(255, 166, 0);
-}
+@font-face {
+    font-family: "MuseoSansCyrl500";  
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/MuseoSansCyrl500.otf")
+}   
 
-div {
-    box-sizing: border-box;
-    width: 150px;
-    height: 150px;
-    background-color:  rgb(35, 236, 16);
-    margin: 10px;
-    padding: 68px;
-    font-size: 28px;
-}
-
-.round {
-    border-radius: 50%;
-}
-
-#sun {
-    background-color: orange;
-} 
-
-
-.text__wrapper {
+@font-face {
+    font-family: "MuseoSansCyrl100";  
+    font-style: normal;
     font-weight: 100;
-    font-size: 40px;
+    src: url("../fonts/MuseoSansCyrl100.otf")
 }
 
-.text_pr{
-    font-size: 50%;
+@font-face {
+    font-family: "MuseoSansCyrl300";  
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/MuseoSansCyrl300.otf")
 }
 
-.text_em {
-    font-size: 1.2em;
+@font-face {
+    font-family: "MuseoSansCyrl700";  
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/MuseoSansCyrl700.otf")
 }
 
-html {
-    font-size: 50px;
+body{
+    margin: 0;  
+    padding: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-family: "MuseoSansCyrl100";
 }
 
-.text_rem {
-    font-size: 0.5rem;
+.base {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "MuseoSansCyrl100";
 }
 
-/* vw, vh, vmin, vmax – относительно размера экрана. */
-/* px – абсолютные пиксели, */
-/* em – задаёт размер относительно шрифта родителя */
-
-
-.block {
-    width: 200px;
-    height: 200px;
-    background-color: orange;
-    border: 5px solid red;
-    padding: 50px;
-    margin: 100px;
+.main_body{
+    margin: 0 auto;  
+    padding: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-family: "MuseoSansCyrl100";
 }
 
-.block_content {
+.head {
+    display: flex;
+    /* width: 1440px; */
+    height: 87px;
+    font-family: "MuseoSansCyrl100";
+    box-shadow: 0 1.1335145235px 4.293615818px 0 rgba(133,94,152,.03),
+                0 2.8667433262px 10.8588762283px 0 rgba(133,94,152,.04),
+                0 5.847887516px 22.1510887146px 0 rgba(133,94,152,.05),
+                0 5.847887516px 22.1510887146px 0 rgba(133,94,152,.05);
+    flex-direction: column;
+    justify-content: row;
+}
+
+.head_block{
+    display: flex;
+    font-family: "MuseoSansCyrl100";
+    padding: 20px 40px 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.exit_button{
+    width: 173px;
+    height: 40px;
+    font-family: "MuseoSansCyrl500";
+    background: #fff;
+    border: 1px solid #7953c3;
+    color: #7953c3;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.registration_form{
+    margin-left: 14%;
+    margin-right: 14%;
+    padding: 60px;
+    padding-bottom: 160px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_create_header{
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+    display: grid;
+}
+
+.profile_create_header_title{
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.profile_create_header_sub_title{
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header_3_style{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-family: "MuseoSansCyrl700";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #040013;
+}
+
+.sub_title_header_3_style{
+    margin-bottom: 5px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #ccc;
+    font-size: 16px;
+    font-family: "MuseoSansCyrl700";
+}
+
+.on_main_button{
+    width: 108px;
+    height: 36px;
+    font-family: "MuseoSansCyrl300";
+    background: #fff;
+    border: 1px solid #7953c3;
+    color: #7953c3;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.profile_create_header_progress_sub_line{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 8%;
+    background-color: #d9d1e0;
+    height: 2px;
+}
+
+.profile_create_header_progress_line{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f6;
+    height: 2px;
+}
+
+.profile_create_constructor{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
     width: 100%;
-    height: 100%;
-    background-color: lightskyblue;
 }
 
-.adaptive {
-    width: 1000px;
-    height: 200px;
-    background-color: orange;
-    margin: 50px;
-    width: 80%;
+.profile_create_data_upload{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-family: "MuseoSansCyrl700";  
+    font-size: 14px;
 }
 
-@media screen and (max-width: 1600px) {
-
-    .adaptive {
-        background: red;
-        width: 800;
-    }
+.upload_photo{
+    height: 150px;
+    width: 366px;
+    padding: 40px 29px;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px dashed #cdbddb;
+    border: 1px dashed var(--d-9-d-1-e-0-stroke,#cdbddb);
+    border-radius: 16px;   
 }
 
-@media screen and (max-width: 1280px) {
-
-    .adaptive {
-        background: greenyellow;
-        width: 500px;
-    }
+.label_photo_upload{
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+.upload_photo_button{
+    background-color: #7953c3;
+    border: 0px;
+    border-radius:8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 40px;
+    width: 144px;
+}
 
-    .adaptive {
-        background: lightblue;
-        width: 300px;
-    }
+.upload_text_style{
+    font-size: 16px; 
+    color: #aaa; 
+    font-family: "MuseoSansCyrl300";
+    font-weight: 300; 
+    font-size: 14px; 
+}
+
+.text_input{
+    width: 366px;
+    box-sizing: border-box;
+    font-family: "MuseoSansCyr100";
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.label_input_data{
+    left: 0px; 
+    top: -18px; 
+    font-family: "MuseoSansCyrl300";
+    font-size: 14px; 
+    font-weight: 300; 
+    line-height: 20px; 
+    color: rgb(93, 91, 102)
+}
+
+.input_data_style{
+    background-color: #f4f4f6;
+    border-radius: 8px;
+    border: #f4f4f6;
+    color: #040013;
+    font-family: "MuseoSansCyrl500";
+    font-size: 16px;
+    font-weight: 500;
+    overflow-wrap: normal;
+    padding: 16px 12px;
+    width: 366px;   
+}
+
+.radio_input{
+    font-family: "MuseoSansCyrl500";
+    font-weight: 500;
+}
+
+.profile_create_card{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "MuseoSansCyrl500";
+}
+
+.profile_create_card_data{
+    margin-bottom: 24px;
+    padding: 20px;
+    border-radius: 32px;
+    gap: 28px;
+    box-shadow: 0 5.84789px 22.1511px rgba(133,94,152,.05), 
+    0 5.84789px 22.1511px rgba(133,94,152,.05), 
+    0 2.86674px 10.8589px rgba(133,94,152,.04), 
+    0 1.13351px 4.29362px rgba(133,94,152,.028);
+    display: flex;
+}
+
+.card_photo_side{
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_photo{
+    border: 1px dashed #cdbddb;
+    border-radius: 16px;
+    height: 140px;
+}
+
+.card_photo_button{
+    background-color: #e1d7f5;
+    border:#e1d7f5;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 600;
+    height: 22px;
+    padding: 6px 12px;
+    width: 140px;
+}
+
+.card_info{
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 4px;
+    
+}
+
+.kruzhok_blyat{
+    background: #7953c3;
+    border-radius: 100px;
+    height: 4px;
+    opacity: .3;
+    width: 4px;
+}
+
+.oval_blyat{
+    background-color: #f4f4f6;
+    border-radius: 6px;
+}
+
+.card_text_side_space1{
+    height: 17px;
+    margin-top: 10px;
+    max-width: 400px;
+    min-width: 80px;
+    padding: 3px 6px;
+    background-color: #f4f4f6;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+.card_text_side_space2{
+    background-color: #f4f4f6;
+    border-radius: 6px;
+    height: 11px;
+    margin-top: 10px;
+    width: 332px;
+}
+
+.some_goofy_af_another_fucking_card{
+    margin-top: 20px;
+    padding: 12px 20px 12px 12px;
+    border-radius: 8px;
+    box-shadow: -8px 8px 0 #7953c3, 0 6px 20px rgba(133,94,152,.06), 
+    0 4px 8px rgba(133,94,152,.08), 0 2px 4px rgba(133,94,152,.08), 
+    0 6px 20px rgba(133,94,152,.08), 0 6px 20px rgba(133,94,152,.08), 
+    0 4px 12px rgba(133,94,152,.06), 0 2px 4px rgba(133,94,152,.06);
+    gap: 8px;
+    width: 406px;
+}
+
+.eshe_oval_blyat{
+    margin-top: 5px;
+    background-color: #eeeef1;
+    border-radius: 6px;
+    width: 198px;
+    height: 20px;
+}
+
+.some_advise{
+    margin-bottom: 24px;
+    padding: 12px 16px;
+    border-radius: 16px;
+    box-shadow: 0 1.1335145235px 4.293615818px 0 rgba(133,94,152,.03), 
+    0 2.8667433262px 10.8588762283px 0 rgba(133,94,152,.04), 
+    0 5.847887516px 22.1510887146px 0 rgba(133,94,152,.05), 
+    0 5.847887516px 22.1510887146px 0 rgba(133,94,152,.05);
+    font-family: "MuseoSansCyrl500";
+}
+
+.font_zhir{
+    font-family: "MuseoSansCyrl700";
+}
+
+.div_next_button{
+    display: flex;
+    justify-content: end;
+}
+.next_button{
+    width: 220px;
+    height: 50px;
+    font-family: "MuseoSansCyrl500";
+    background: #7953c3;
+    border: 1px solid #7953c3;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;   
 }
