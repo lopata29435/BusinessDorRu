@@ -9,176 +9,235 @@
     <body>
         <div class = "base">
             <header class = "head">
-                <div class = "head_block">
+                <div class = "head__logo">
                     <img src = "img/logo.svg" alt = "logo"/>
-                    <button class = exit_button>Выйти из аккаунта</button>
+                    <button class = "head__logo__exit-button">Выйти из аккаунта</button>
                 </div>
             </header>
 
             <main>
-                <div class = "main_body">
-                    <div class = "registration_form">
-                        <div class = "profile_create_header">
-                            <button class="on_main_button">Назад</button>
-                            <div class = "profile_create_header_title">
-                                <h3 class="header_3_style">Создание профиля</h3>
-                                <div class = "profile_create_header_sub_title">
-                                    <p class = "sub_title_header_3_style">/</p>
-                                    <p class = "sub_title_header_3_style">Образование</p>
+                <div class = "main-body">
+                    <div class = "main-body__registration">
+                        <div class = "main-body__registration__profile-create-header">
+                            <button class="main-body__registration__profile-create-header__button">Назад</button> 
+                            <div class = "main-body__registration__profile-create-header__title"> 
+                                <h3 class="main-body__registration__profile-create-header__header">Создание профиля</h3> 
+                                <div class = "main-body__registration__profile-create-header__sub-title">
+                                    <p class = "main-body__registration__profile-create-header__ptext">/</p>
+                                    <p class = "main-body__registration__profile-create-header__ptext">Образование</p>
                                 </div>
                             </div>
-                            <div class = "profile_create_header_progress_line">
-                                <div class = "profile_create_header_progress_sub_line"></div>
+                            <div class = "main-body__registration__progress-line">
+                                <div class = "main-body__registration__progress-sub-line"></div>
                             </div>
                         </div>
                         
-                        <div class = "profile_create_constructor">
-                            
-                            <div class = "profile_create_constructor_form">
-                                <div class = "radio_input">
-                                    <div class = "radio_input_tog">
-                                        <input id="STUDENT" type="radio" name="accountType" value="STUDENT">
-                                        <label for="STUDENT">Студент / выпускник</label>
+                        <div class = "main-body__registration__form">
+                            <div class = "main-body__registration__form__text-input">
+                                <div class = "main-body__registration__form__text-input__radio-block">
+                                    <div class="main-body__registration__form__text-input__radio-block__radio-input">
+                                        <input id="STUDENT" class="main-body__registration__form__text-input__radio-block__radio-input__input" type="radio" name="accountType" value="Студент">
+                                        <label for="STUDENT" class= "main-body__registration__form__text-input__radio-block__radio-input__label">Студент / выпускник</label>
                                     </div>
-                                    <div class = "radio_input_tog">
-                                        <input id="EMPLOYEE" type="radio" name="accountType" value="EMPLOYEE">
-                                        <label for="EMPLOYEE">Сотрудник</label>
+                                    <div class="main-body__registration__form__text-input__radio-block__radio-input">
+                                        <input id="EMPLOYEE" class="main-body__registration__form__text-input__radio-block__radio-input__input" type="radio" name="accountType" value="Сотрудник">
+                                        <label for="EMPLOYEE" class = "main-body__registration__form__text-input__radio-block__radio-input__label">Сотрудник</label>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class = "profile_create_constructor_education">
+                                <div id = "employee-block">
+                                    <div class="main-body__registration__form__text-input__education__text-input">
+                                        <label for="work_empl" class="main-body__registration__form__text-input__education__text-input__label">Кем вы работаете</label>
+                                        <input name="work_empl" id="work_empl" class="main-body__registration__form__text-input__education__text-input__input" type="text">
+                                    </div>
+                                    <div class="main-body__registration__form__text-input__education__text-input">
+                                        <label for="work_year" class="main-body__registration__form__text-input__education__text-input__label">Год начала работы</label>
+                                        <input name="work_year" id="work_year" class="main-body__registration__form__text-input__education__text-input__input" type="date">
+                                    </div>
+                                </div>
+                                <div id = "student-block">
+                                    <div class = "main-body__registration__form__text-input__education">
                                         <div>
-                                            <p style = "color: #5d5b66; font-size: 14px;">Курс</p>
-                                            <div class="multi_choise">
-                                                <label class="one_choise" style = "background-color: #7953c3; border-radius: 8px; color: #fff;">
+                                            <p class = "main-body__registration__form__text-input__education__ptext">Курс</p>
+                                            <div class="main-body__registration__form__text-input__education__multi_choise">
+                                                <label class="main-body__registration__form__text-input__education__multi_choise__label">
                                                     <input name="educationLevel" type="radio" value="1" style = "display: none;">1
                                                 </label>
-                                                <label class="one_choise">
+                                                <label class="main-body__registration__form__text-input__education__multi_choise__label">
                                                     <input name="educationLevel" type="radio" value="2" style = "display: none;">2
                                                 </label>
-                                                <label class="one_choise">
+                                                <label class="main-body__registration__form__text-input__education__multi_choise__label">
                                                     <input name="educationLevel" type="radio" value="3" style = "display: none;">3
                                                 </label>
-                                                <label class="one_choise">
+                                                <label class="main-body__registration__form__text-input__education__multi_choise__label">
                                                     <input name="educationLevel" type="radio" value="4" style = "display: none;">4
                                                 </label>
-                                                <label class="one_choise">
+                                                <label class="main-body__registration__form__text-input__education__multi_choise__label">
                                                     <input name="educationLevel" type="radio" value="5" style = "display: none;">5
                                                 </label>
-                                                <label class="one_choise">
+                                                <label class="main-body__registration__form__text-input__education__multi_choise__label">
                                                     <input name="educationLevel" type="radio" value="6" style = "display: none;">6
                                                 </label>
                                             </div>
                                             <div>
-                                                <label class="already_done">
-                                                    <input name="educationLevel" type="radio" value="7" style="display: none;">
-                                                    <div class="MultipleFormFilter_single_checkbox__qv9Cx">
+                                                <label class="main-body__registration__form__text-input__education__multi_choise__label-done">
+                                                    <input class = "main-body__registration__form__text-input__education__multi_choise__input-done" name="educationLevel" type="radio" value="выпускник">
+                                                    <div id = "ed_done_img">
                                                         <img src="icons/Rectangle.svg" alt="mark_icon">
                                                     </div>Уже окончил Вышку
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="text_input">
-                                            <label for="name" class="label_input_data">Ступень образования</label>
-                                            <input name="name" id="name" class="input_data_style" type="text">
+                                        <div class="main-body__registration__form__text-input__education__grade">
+                                            <div class = "main-body__registration__form__text-input__education__grade__select">
+                                                <span class = "main-body__registration__form__text-input__education__grade__selected">Ступень образования</span>
+                                                <div class = "main-body__registration__form__text-input__education__grade__caret"></div>
+                                            </div>
+                                            <ul class = "main-body__registration__form__text-input__education__grade__menu">
+                                                <li>Бакалавриат</li>
+                                                <li>Магистратура</li>
+                                            </ul>
                                         </div>
-                                        <div class="text_input">
-                                            <label for="name" class="label_input_data">Факультет</label>
-                                            <input name="name" id="name" class="input_data_style" type="text">
+                                        <div class="main-body__registration__form__text-input__education__faculty">
+                                            <div class = "main-body__registration__form__text-input__education__faculty__select">
+                                                <span class = "main-body__registration__form__text-input__education__faculty__selected">Ступень образования</span>
+                                                <div class = "main-body__registration__form__text-input__education__faculty__caret"></div>
+                                            </div>
+                                            <ul class = "main-body__registration__form__text-input__education__faculty__menu">
+                                                <li>СУНЦ НГУ 1</li>
+                                                <li>СУНЦ НГУ 2</li>
+                                                <li>СУНЦ НГУ 3</li>
+                                                <li>СУНЦ НГУ 4</li>
+                                                <li>СУНЦ НГУ 5</li>
+                                                <li>СУНЦ НГУ 6</li>
+                                                <li>СУНЦ НГУ 7</li>
+                                                <li>СУНЦ НГУ 8</li>
+                                                <li>СУНЦ НГУ 9</li>
+                                                <li>СУНЦ НГУ 10</li>
+                                                <li>СУНЦ НГУ 11</li>
+                                                <li>СУНЦ НГУ 12</li>
+                                                <li>СУНЦ НГУ 13</li>
+                                                <li>СУНЦ НГУ 14</li>
+                                                <li>СУНЦ НГУ 15</li>
+                                                <li>СУНЦ НГУ 16</li>
+                                                <li>СУНЦ НГУ 17</li>
+                                                <li>СУНЦ НГУ 18</li>
+                                                <li>СУНЦ НГУ 19</li>
+                                                <li>СУНЦ НГУ 20</li>
+                                                <li>СУНЦ НГУ 21</li>
+                                                <li>СУНЦ НГУ 22</li>
+                                            </ul>
                                         </div>
-                                        <div class="text_input">
-                                            <label for="name" class="label_input_data">Образовательная программа</label>
-                                            <input name="name" id="name" class="input_data_style" type="text">
+                                        <div class="main-body__registration__form__text-input__education__op">
+                                            <div class = "main-body__registration__form__text-input__education__op__select">
+                                                <span class = "main-body__registration__form__text-input__education__op__selected">Образовательная программа</span>
+                                                <div class = "main-body__registration__form__text-input__education__op__caret"></div>
+                                            </div>
+                                            <ul class = "main-body__registration__form__text-input__education__op__menu">
+                                                <li>11-1</li>
+                                                <li>11-2</li>
+                                                <li>11-3</li>
+                                                <li>11-4</li>
+                                                <li>11-5</li>
+                                                <li>11-6</li>
+                                                <li>11-7</li>
+                                                <li>11-8</li>
+                                                <li>11-9</li>
+                                                <li>11-10</li>
+                                                <li>11-11</li>
+                                                <li>11-12</li>
+                                            </ul>
                                         </div>
-                                        <div class="text_input">
-                                            <label for="name" class="label_input_data">Работа</label>
-                                            <input name="name" id="name" class="input_data_style" type="text">
+                                        <div class="main-body__registration__form__text-input__education__text-input">
+                                            <label for="work_std" class="main-body__registration__form__text-input__education__text-input__label">Работа</label>
+                                            <input name="work_std" id="work_std" class="main-body__registration__form__text-input__education__text-input__input" type="text">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class = "profile_create_card">
-                                <p style = "margin-bottom: 16px; padding-left: 16px; color: #5d5b66; font-size: 14px;">Так будет выглядеть твоя будущая страница</p>
-                                <div class="profile_create_card_data">
-                                    <div class="card_photo_side">
-                                        <div class="card_photo"></div>
-                                        <button disabled="" class="card_photo_button">Показать контакты</button>
+                            <section class = "main-body__registration__form__profile-create-card">
+                                <p class = "main-body__registration__form__profile-create-card__ptext">Так будет выглядеть твоя будущая страница</p>
+                                <section class = "main-body__registration__form__profile-create-card__data">
+                                    <div class = "main-body__registration__form__profile-create-card__data__card-photo-side">
+                                        <div class = "main-body__registration__form__profile-create-card__data__card-photo-side__card-photo"></div>
+                                        <button class = "main-body__registration__form__profile-create-card__data__card-photo-side__card-photo-button">Показать контакты</button>
                                     </div>
-                                    <div class="card_text_side">
-                                        <p style = "font-size: 16px; color: #040013;">Пётр Лопаткин</p>
-                                        <div class="card_info">
-                                            <p style="font-size: 9px; color: #040013;">Девушка</p>
-                                            <div class="kruzhok_blyat"></div>
-                                            <div>
-                                                <p style="font-size: 9px; color: #040013;">18 лет</p>
-                                            </div> 
-                                        <div class="kruzhok_blyat"></div> 
-                                        <div class="oval_blyat" style = "height: 11px; width: 120px;"></div> 
+                                    <div class = "main-body__registration__form__profile-create-card__data__card-text-side">
+                                        <div class = "main-body__registration__form__profile-create-card__data__card-text-side__div-name"></div>
+                                        <div class ="main-body__registration__form__profile-create-card__data__card-text-side__card-info">
+                                            <div class = "main-body__registration__form__profile-create-card__data__card-text-side__div-sex"></div>
+                                            <div class ="main-body__registration__form__profile-create-card__data__card-text-side__circle"></div>
+                                            <div class = "main-body__registration__form__profile-create-card__data__card-text-side__div-age"></div> 
+                                        <div class="main-body__registration__form__profile-create-card__data__card-text-side__circle"></div> 
+                                        <div class="main-body__registration__form__profile-create-card__data__card-text-side__grade"></div>
+                                        <div class="main-body__registration__form__profile-create-card__data__card-text-side__edu-grade-div"></div>
+                                        <div class="main-body__registration__form__profile-create-card__data__card-text-side__edu-faculty-div"></div>
+                                        <div class="main-body__registration__form__profile-create-card__data__card-text-side__edu-op-div"></div>    
                                     </div>
-                                    <div class="card_text_side_space1"></div>
-                                    <div class="card_text_side_space2"></div>
-                                    <div class="some_goofy_af_another_fucking_card">
-                                        <p style = "font-size: 9px;  color: #5d5b66;">Предпочтения по жилью</p>
-                                        <div class="eshe_oval_blyat"></div>
-                                        <div style="margin-top: 4px; display: flex; gap: 7px; flex-wrap: wrap;">
-                                            <div style="margin-top: 2px; background-color: #eeeef1; border-radius: 4px; width: 308px; height: 10px;"></div>
+                                    <div class="main-body__registration__form__profile-create-card__data__work"></div>
+                                    <div class = "main-body__registration__form__profile-create-card__data__about-ur_wrapper">
+                                        <div class="main-body__registration__form__profile-create-card__data__about-ur"></div>
+                                    </div>
+                                    <div class="main-body__registration__form__profile-create-card__data__pereferences">
+                                        <p class = "main-body__registration__form__profile-create-card__data__pereferences__ptext">Предпочтения по жилью</p>
+                                        <div class="main-body__registration__form__profile-create-card__data__pereferences__price"></div>
+                                        <div calss = "main-body__registration__form__profile-create-card__data__pereferences__wraper-station">
+                                            <div class = "main-body__registration__form__profile-create-card__data__pereferences__station"></div>
                                         </div>
-                                        <div style = "margin-bottom: 8px; margin-top: 8px; background-color: #ccc; height: 1px;"></div>
+                                        <div calss = "main-body__registration__form__profile-create-card__data__pereferences__dividing-line"></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class = "some_advise">
-                                <div style = "display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                            </section>
+                            <div class = "main-body__registration__form__profile-create-advise">
+                                <div class = "main-body__registration__form__profile-create-advise__text">
                                     <div>
-                                        <div class = "font_zhir">
-                                            <p style="color: #040013;">Расскажи, где ты учишься</p>
-                                        </div>
-                                        <p style="color: #5d5b66; font-size: 14px;">Часто студенты ищут соседей по схожим интересам</p>
+                                        <p class = "main-body__registration__form__profile-create-advise__text__ptext-head">Расскажи, где ты учишься</p>
+                                        <p class = "main-body__registration__form__profile-create-advise__text__ptext-sub">Часто студенты ищут соседей по схожим интересам</p>       
                                     </div>    
                                     <div>
                                         <img src = "icons/fine_icon.svg" alt = "fine"/>
                                     </div>
                                 </div>
-                                
                             </div>
+                        </section>
+                        </div>   
+                        <div class = "main-body__next-button-wraper">
+                            <button class = "main-body__next-button">Продолжить</button>
                         </div>   
                     </div>
-                    <div class = "div_next_button">
-                        <button class = "next_button">Продолжить</button>
-                    </div>     
                 </div>    
             </main>
             
-            <footer style = "padding: 80px 0 0; border-top: 1px solid #ebebeb; ">
-                <div style = "margin-left: 14%; margin-right: 14%; row-gap: 20px;">
-                    <div class = "footer_data">
-                        <div class = "footer_data_1">
+            <footer>
+                <div class = "footer__wraper">
+                    <div class = "footer__data">
+                        <div class = "footer__data__contacts">
                             <div>
-                                <div class = "footer_sub_data_1"><p style = "margin: 0; font-size: 48px">homeet@style.org</p></div>
-                                <div class = "footer_sub_data_2"><p style = "margin: 0; font-size: 16px">техническая поддержка</p></div>
+                                <div class = "footer__data__contacts__email-wraper"><p class = "footer__data__contacts__ptext">homeet@style.org</p></div>
+                                <div class = "footer__data__contacts__support-wraper"><p class = "footer__data__contacts__ptext">техническая поддержка</p></div>
                             </div>
-                            <div class = "footer_data_2">
-                                <div class = "footer_sub_data_3">
+                            <div class = "footer__data__contacts__additional-data">
+                                <div class = "footer__data__contacts__additional-data__links">
                                     <p>О сервисе</p>
                                     <p>Контакты</p>
                                     <p>Политика конфидециальности</p>
                                 </div>    
-                                <div class = "media_icons">
+                                <div class = "footer__data__contacts__additional-data___icons">
                                     <img src = "icons/tg.svg" alt = "Tg"/>
                                     <img src = "icons/vk.svg" alt = "VK"/>
                                 </div>
                             </div>
                         </div>
-                        <div class = "polosochka_blyat"></div>
-                        <div class = "copyright">
-                            <p class = "copyright_text">Страница является грустью и печалью студента.<br>
+                        <div class = "footer__data__dividing-line"></div>
+                        <div class = "footer__data__copyright">
+                            <p class = "footer__data__copyright__text">Страница является грустью и печалью студента.<br>
                                 Сервис не несет ответственности за название некоторых классов, их цензурность и т.д.</p>
-                            <p class = "copyright_text">сделано рабским трудом</p>
+                            <p class = "footer__data__copyright__text">сделано рабским трудом</p>
                         </div>
                     </div>
                 </div>
             </footer>
         </div>
+        <script src = "js/script2.js"></script>   
     </body>
 </html>
