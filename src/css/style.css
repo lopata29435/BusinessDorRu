@@ -41,14 +41,6 @@ body{
     font-family: "MuseoSansCyrl100";
 }
 
-.main_body{
-    margin: 0 auto;  
-    padding: 0;
-    border-radius: 0;
-    box-sizing: border-box;
-    font-family: "MuseoSansCyrl100";
-}
-
 .head {
     display: flex;
     /* width: 1440px; */
@@ -62,7 +54,7 @@ body{
     justify-content: row;
 }
 
-.head_block{
+.head__logo{
     display: flex;
     font-family: "MuseoSansCyrl100";
     padding: 20px 40px 20px 40px;
@@ -71,7 +63,7 @@ body{
     
 }
 
-.exit_button{
+.head__logo__exit-button{
     width: 173px;
     height: 40px;
     font-family: "MuseoSansCyrl500";
@@ -80,9 +72,18 @@ body{
     color: #7953c3;
     border-radius: 8px;
     font-size: 16px;
+    cursor: pointer;
 }
 
-.registration_form{
+.main-body{
+    margin: 0 auto;  
+    padding: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-family: "MuseoSansCyrl100";
+}
+
+.main-body__registration{
     margin-left: 14%;
     margin-right: 14%;
     padding: 60px;
@@ -92,14 +93,26 @@ body{
     flex-direction: column;
 }
 
-.profile_create_header{
+.main-body__registration__profile-create-header{
     margin: 0;
     padding: 0;
     gap: 16px;
     display: grid;
 }
 
-.profile_create_header_title{
+.main-body__registration__profile-create-header__button{
+    width: 108px;
+    height: 36px;
+    font-family: "MuseoSansCyrl300";
+    background: #fff;
+    border: 1px solid #7953c3;
+    color: #7953c3;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-body__registration__profile-create-header__title{
     margin: 0;
     padding: 0;
     gap: 16px;
@@ -108,15 +121,7 @@ body{
     align-items: end;
 }
 
-.profile_create_header_sub_title{
-    margin: 0;
-    padding: 0;
-    gap: 16px;
-    display: flex;
-    flex-direction: row;
-}
-
-.header_3_style{
+.main-body__registration__profile-create-header__header{
     margin: 0;
     padding: 0;
     border: 0;
@@ -129,7 +134,15 @@ body{
     color: #040013;
 }
 
-.sub_title_header_3_style{
+.main-body__registration__profile-create-header__sub-title{
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-body__registration__profile-create-header__ptext{
     margin-bottom: 5px;
     padding: 0;
     border: 0;
@@ -140,18 +153,15 @@ body{
     font-family: "MuseoSansCyrl700";
 }
 
-.on_main_button{
-    width: 108px;
-    height: 36px;
-    font-family: "MuseoSansCyrl300";
-    background: #fff;
-    border: 1px solid #7953c3;
-    color: #7953c3;
-    border-radius: 8px;
-    font-size: 16px;
+.main-body__registration__progress-line{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f6;
+    height: 2px;
 }
 
-.profile_create_header_progress_sub_line{
+.main-body__registration__progress-sub-line{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -160,15 +170,7 @@ body{
     height: 2px;
 }
 
-.profile_create_header_progress_line{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f6;
-    height: 2px;
-}
-
-.profile_create_constructor{
+.main-body__registration__form{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -178,7 +180,7 @@ body{
     width: 100%;
 }
 
-.profile_create_data_upload{
+.main-body__registration__form__data-upload{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -189,7 +191,7 @@ body{
     font-size: 14px;
 }
 
-.upload_photo{
+.main-body__registration__form__data-upload__upload-photo{
     height: 150px;
     width: 366px;
     padding: 40px 29px;
@@ -202,7 +204,29 @@ body{
     border-radius: 16px;   
 }
 
-.label_photo_upload{
+.main-body__registration__form__data-upload__uploaded-photo{
+    height: 200px;
+    width: 200px;
+    border-radius: 16px;
+    position: relative;
+}
+
+.main-body__registration__form__data-upload__uploaded-photo__remove-btn{
+    background-color: #fff;
+    height: 18px;
+    width: 18px;
+    border-radius: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 100;
+}
+
+.main-body__registration__form__data-upload__upload-photo__label{
     gap: 16px;
     display: flex;
     flex-direction: column;
@@ -210,7 +234,12 @@ body{
     text-align: center;
 }
 
-.upload_photo_button{
+.main-body__registration__form__data-upload__upload-photo__ptext{
+    font-size: 16px; 
+    color: #040013;
+}
+
+.main-body__registration__form__data-upload__upload-photo__button{
     background-color: #7953c3;
     border: 0px;
     border-radius:8px;
@@ -219,9 +248,15 @@ body{
     font-weight: 400;
     padding: 8px 40px;
     width: 144px;
+    cursor: pointer;
 }
 
-.upload_text_style{
+.main-body__registration__form__data-upload__upload-photo__input{
+    display: none;
+
+}
+
+.main-body__registration__form__data-upload__upload-photo__ptext-after-input{
     font-size: 16px; 
     color: #aaa; 
     font-family: "MuseoSansCyrl300";
@@ -229,7 +264,7 @@ body{
     font-size: 14px; 
 }
 
-.text_input{
+.main-body__registration__form__text-input{
     margin: 0;
     padding: 0;
     width: 366px;
@@ -240,17 +275,32 @@ body{
     flex-direction: column;
 }
 
-.label_input_data{
+.main-body__registration__form__text-input__label{
     left: 0px; 
     top: -18px; 
     font-family: "MuseoSansCyrl300";
     font-size: 14px; 
     font-weight: 300; 
     line-height: 20px; 
-    color: rgb(93, 91, 102)
+    color: rgb(93, 91, 102);
 }
 
-.input_data_style{
+.main-body__registration__form__text-input__date{
+    outline: none;
+    background-color: #f4f4f6;
+    border-radius: 8px;
+    border: #f4f4f6;
+    color: #040013;
+    font-family: "MuseoSansCyrl500";
+    font-size: 16px;
+    font-weight: 500;
+    overflow-wrap: normal;
+    padding: 16px 12px;
+    width: 160px;
+}
+
+.main-body__registration__form__text-input__input{
+    outline: none;
     background-color: #f4f4f6;
     border-radius: 8px;
     border: #f4f4f6;
@@ -263,19 +313,83 @@ body{
     width: 366px;   
 }
 
-.radio_input{
+.main-body__registration__form__text-input__textarea{
+    height: 120px; 
+    resize: none;
+    outline: none;
+    background-color: #f4f4f6;
+    border-radius: 8px;
+    border: #f4f4f6;
+    color: #040013;
     font-family: "MuseoSansCyrl500";
+    font-size: 16px;
     font-weight: 500;
+    overflow-wrap: normal;
+    padding: 16px 12px;
+    width: 366px;
 }
 
-.profile_create_card{
+.main-body__registration__form__text-input__radio-block__radio-input__label{
+    display: flex; 
+    align-items: center;
+}
+
+.main-body__registration__form__text-input__radio-block{
+    display: flex; 
+    padding-top: 10px;
+    flex-direction: row;
+    gap: 16px;
+    position: relative;
+}
+
+.main-body__registration__form__text-input__radio-block__radio-input{
+    font-family: "MuseoSansCyrl500";
+    font-weight: 500;
+    display: flex; 
+    align-items: center;
+}
+
+.main-body__registration__form__text-input__radio-block__radio-input__input {
+    display: none;
+}
+  
+.main-body__registration__form__text-input__radio-block__radio-input__input + label::before{
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #7953c3;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+  
+.main-body__registration__form__text-input__radio-block__radio-input__input:checked + label::before{
+    background-color: #7953c3;
+    border-color: #7953c3;
+}
+
+.main-body__registration__form__text-input__input[type="date"]::-webkit-inner-spin-button,
+.main-body__registration__form__text-input__input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none; /* Скрыть логотип календаря и стрелку ввода */
+}
+
+.main-body__registration__form__profile-create-card{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "MuseoSansCyrl500";
 }
 
-.profile_create_card_data{
+.main-body__registration__form__profile-create-card__ptext{
+    margin-bottom: 16px; 
+    padding-left: 16px; 
+    color: #5d5b66; 
+    font-size: 14px;
+}
+
+.main-body__registration__form__profile-create-card__data{
     margin-bottom: 24px;
     padding: 20px;
     border-radius: 32px;
@@ -287,19 +401,19 @@ body{
     display: flex;
 }
 
-.card_photo_side{
+.main-body__registration__form__profile-create-card__data__card-photo-side{
     gap: 12px;
     display: flex;
     flex-direction: column;
 }
 
-.card_photo{
+.main-body__registration__form__profile-create-card__data__card-photo-side__card-photo{
     border: 1px dashed #cdbddb;
     border-radius: 16px;
     height: 140px;
 }
 
-.card_photo_button{
+.main-body__registration__form__profile-create-card__data__card-photo-side__card-photo-button{
     background-color: #e1d7f5;
     border:#e1d7f5;
     border-radius: 4px;
@@ -311,7 +425,44 @@ body{
     width: 140px;
 }
 
-.card_info{
+.main-body__registration__form__profile-create-card__data__card-text-side{
+    color: #040013;
+}
+
+.main-body__registration__form__profile-create-card__data__card-text-side__div-name{
+    background-color: #f4f4f6;
+    border-radius: 6px;
+    height: 22px; 
+    width: 150px;
+}
+
+.main-body__registration__form__profile-create-card__data__card-text-side__ptext-name{
+    font-size: 16px;
+}
+
+.main-body__registration__form__profile-create-card__data__card-text-side__ptext-sex{
+    font-size: 9px;
+}
+
+.main-body__registration__form__profile-create-card__data__card-text-side__ptext-age{
+    font-size: 9px;
+}
+
+.main-body__registration__form__profile-create-card__data__card-text-side__div-sex{
+    background-color: #f4f4f6;
+    border-radius: 6px;
+    height: 11px; 
+    width: 32px;
+}
+
+.main-body__registration__form__profile-create-card__data__card-text-side__div-age{
+    background-color: #f4f4f6;
+    border-radius: 6px;
+    height: 11px; 
+    width: 32px;
+}
+
+.main-body__registration__form__profile-create-card__data__card-text-side__card-info{
     margin-top: 7px;
     display: flex;
     align-items: center;
@@ -320,7 +471,7 @@ body{
     
 }
 
-.kruzhok_blyat{
+.main-body__registration__form__profile-create-card__data__card-text-side__circle{
     background: #7953c3;
     border-radius: 100px;
     height: 4px;
@@ -328,12 +479,14 @@ body{
     width: 4px;
 }
 
-.oval_blyat{
+.main-body__registration__form__profile-create-card__data__card-text-side__eclipse{
     background-color: #f4f4f6;
     border-radius: 6px;
+    height: 11px; 
+    width: 120px;
 }
 
-.card_text_side_space1{
+.main-body__registration__form__profile-create-card__data__work{
     height: 17px;
     margin-top: 10px;
     max-width: 400px;
@@ -345,7 +498,7 @@ body{
     padding: 8px 12px;
 }
 
-.card_text_side_space2{
+.main-body__registration__form__profile-create-card__data__about-ur{
     background-color: #f4f4f6;
     border-radius: 6px;
     height: 11px;
@@ -353,7 +506,34 @@ body{
     width: 332px;
 }
 
-.some_goofy_af_another_fucking_card{
+.main-body__registration__form__profile-create-card__data__about-ur_wrapper{
+    display: flex;
+    gap: 10px;
+}
+
+.main-body__registration__form__profile-create-card__data__ptext-about-ur{
+    color: #5d5b66;
+    font-size: 9px;
+    font-family: "MuseoSansCyrl500";
+}
+
+.main-body__registration__form__data-upload__uploaded-photo__expand-btn{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    height: 10px;
+    color: #7953c3;
+    background-color: #f4f1f5;
+    font-family: "MuseoSansCyrl500";
+    font-size: 9px;
+    cursor: pointer;
+    border-radius: 6px;
+    z-index: 100;
+    display: flex;
+    align-items: row;
+    justify-content: space-between;
+}
+
+.main-body__registration__form__profile-create-card__data__pereferences{
     margin-top: 20px;
     padding: 12px 20px 12px 12px;
     border-radius: 8px;
@@ -365,7 +545,12 @@ body{
     width: 406px;
 }
 
-.eshe_oval_blyat{
+.main-body__registration__form__profile-create-card__data__pereferences__ptext{
+    font-size: 9px;  
+    color: #5d5b66;
+}
+
+.main-body__registration__form__profile-create-card__data__pereferences__price{
     margin-top: 5px;
     background-color: #eeeef1;
     border-radius: 6px;
@@ -373,7 +558,29 @@ body{
     height: 20px;
 }
 
-.some_advise{
+.main-body__registration__form__profile-create-card__data__pereferences__wraper-station{
+    margin-top: 4px; 
+    display: flex; 
+    gap: 7px; 
+    flex-wrap: wrap;
+}
+
+.main-body__registration__form__profile-create-card__data__pereferences__dividing-line{
+    margin-bottom: 8px; 
+    margin-top: 8px; 
+    background-color: #ccc; 
+    height: 1px;
+}
+
+.main-body__registration__form__profile-create-card__data__pereferences__station{
+    margin-top: 2px; 
+    background-color: #eeeef1;
+    border-radius: 4px; 
+    width: 308px; 
+    height: 10px;
+}
+
+.main-body__registration__form__profile-create-advise{
     margin-bottom: 24px;
     padding: 12px 16px;
     border-radius: 16px;
@@ -384,15 +591,28 @@ body{
     font-family: "MuseoSansCyrl500";
 }
 
-.font_zhir{
-    font-family: "MuseoSansCyrl700";
+.main-body__registration__form__profile-create-advise__text{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
 }
 
-.div_next_button{
+.main-body__registration__form__profile-create-advise__text__ptext-head{
+    font-family: "MuseoSansCyrl700";
+    color: #040013;
+}
+
+.main-body__registration__form__profile-create-advise__text__ptext-sub{
+    color: #5d5b66; 
+    font-size: 14px;
+}
+
+.main-body__next-button-wraper{
     display: flex;
     justify-content: end;
 }
-.next_button{
+.main-body__next-button{
     width: 220px;
     height: 50px;
     font-family: "MuseoSansCyrl500";
@@ -401,37 +621,55 @@ body{
     color: white;
     border-radius: 8px;
     font-size: 16px;   
+    cursor: pointer;
 }
 
-.footer_data{
+footer{
+    padding: 80px 0 0; 
+    border-top: 1px solid #ebebeb; 
+}
+
+.footer__wraper{
+    margin-left: 14%; 
+    margin-right: 14%; 
+    row-gap: 20px;
+}
+
+.footer__data{
     display: flex;
     flex-direction: column;
     row-gap: 70px;
 }
 
-.footer_data_1{
+.footer__data__contacts{
     display: flex;
     flex-direction: column;
     row-gap: px;
 }
 
-.footer_sub_data_1{
+.footer__data__contacts__email-wraper{
     color:#7953c3;
     font-family: "MuseoSansCyrl700";
+    font-size: 48px
 }
 
-.footer_sub_data_2{
+.footer__data__contacts__ptext{
+    margin: 0;
+}
+
+.footer__data__contacts__support-wraper{
     color: #5d5b66;
     font-family: "MuseoSansCyrl500";
+    font-size: 16px
 }
 
-.footer_data_2{
+.footer__data__contacts__additional-data{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
 }
 
-.footer_sub_data_3{
+.footer__data__contacts__additional-data__links{
     margin-top: 40px;
     display: flex;
     align-items: center;
@@ -441,24 +679,24 @@ body{
     font-size: 16px;
 }
 
-.media_icons{
+.ooter__data__contacts__additional-data___icons{
     display: flex;
     align-items: center;
     column-gap: 8px;
 }
 
-.polosochka_blyat{
+.footer__data__dividing-line{
     border: 1px solid #e4ddf3;
     width: 100%;
 }
 
-.copyright{
+.footer__data__copyright{
     display: flex;
     align-items: end;
     justify-content: space-between;
 }
 
-.copyright_text{
+.footer__data__copyright__text{
     color: #aaa;
     font-family: "MuseoSansCyrl500";
         font-size: 14px;
