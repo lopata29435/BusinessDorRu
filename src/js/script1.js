@@ -191,8 +191,8 @@ function handleAboutInput(){
     let label = document.querySelector('.main-body__registration__form__text-input__label[for="about_ur_self"]');
     let ptextAbout= document.querySelector(".main-body__registration__form__profile-create-card__data__ptext-about-ur");
     let wrap =  document.querySelector(".main-body__registration__form__profile-create-card__data__about-ur_wrapper");
-    
-    
+
+
     if(aboutValue.length === 0) {
         aboutInput.style.backgroundColor = "#fff2f2";
         aboutInput.style.border = "1px solid #ff0000";
@@ -227,7 +227,7 @@ function handleAboutInput(){
                 expandButton.appendChild(expandButtonImg);
                 wrap.appendChild(expandButton);
             }
-            
+
             expandButton.addEventListener('click', function() {
                 expandButtonHandler(expandButton, ptextAbout, aboutValue);
             });
