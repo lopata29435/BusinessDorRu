@@ -6,6 +6,32 @@ const telInput = document.querySelector("#phone");
 const tgInput = document.querySelector("#tg");
 const aboutInput = document.querySelector("#about_ur_self");
 
+function postData(event) {
+    event.preventDefault();
+    const formData = new FormData();
+    const formElements = document.querySelectorAll('#userProfileForm input');
+
+    formElements.forEach(element => {
+        const name = element.name;
+        const value = element.type === 'file' ? element.files[0] : element.value;
+        formData.append(name, value);
+    });
+    fetch('/myApp/registration/', {
+        method: 'POST',
+        body: formData,
+
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        alert('Item saved successfully!');
+        document.querySelector("#userProfileForm").reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
 function handleFileSelection() {
     let upload_photo = document.querySelector("#main-body__registration__form__data-upload__photo-block");
     let upload_photo_div = document.querySelector(".main-body__registration__form__data-upload__upload-photo");
@@ -14,70 +40,54 @@ function handleFileSelection() {
     const fileList = picInput.files;
 
     if (fileList.length > 0) {
+        upload_photo_div.style.display = "none";
+
+        let wrapper =  document.createElement('div');
+        wrapper.classList.add("main-body__registration__form__data-upload__uploaded-photo");
         
-        const formData = new FormData();
-        formData.append('photo', fileList[0]);
+        let img1 = document.createElement('img');
+        img1.src = URL.createObjectURL(fileList[0]);
+        img1.style.width = "200px";
+        img1.style.height = "200px";
+        img1.style.borderRadius = "16px";
+        wrapper.appendChild(img1);
+        
+        let img2 = document.createElement('img');
+        img2.src = URL.createObjectURL(fileList[0]);
+        img2.style.width = "140px";
+        img2.style.height = "140px";
+        img2.style.borderRadius = "16px";
+        upload_photo_card.style.border = "1px #cdbddb";
+        upload_photo_card.appendChild(img2);
 
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', '/myApp/registration/', true);
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                upload_photo_div.style.display = "none";
+        let removeButton = document.createElement('div');
+        removeButton.classList.add("main-body__registration__form__data-upload__uploaded-photo__remove-btn");
+        let removeButtonImg = document.createElement('img');
+        removeButtonImg.src = "../../static/myApp/icons/close.svg";
+        removeButton.appendChild(removeButtonImg);
+        wrapper.appendChild(removeButton);
 
-                let wrapper =  document.createElement('div');
-                wrapper.classList.add("main-body__registration__form__data-upload__uploaded-photo");
-                
-                let img1 = document.createElement('img');
-                img1.src = URL.createObjectURL(fileList[0]);
-                img1.style.width = "100%";
-                img1.style.objectFit = "cover";
-                img1.style.height = "100%";
-                img1.style.borderRadius = "16px";
-                wrapper.appendChild(img1);
-                
-                let img2 = document.createElement('img');
-                img2.src = URL.createObjectURL(fileList[0]);
-                img2.style.width = "100%";
-                img2.style.objectFit = "cover";
-                img2.style.height = "100%";
-                img2.style.borderRadius = "16px";
-                upload_photo_card.style.border = "1px solid #cdbddb";
-                upload_photo_card.appendChild(img2);
+        upload_photo.appendChild(wrapper);
 
-                let removeButton = document.createElement('div');
-                removeButton.classList.add("main-body__registration__form__data-upload__uploaded-photo__remove-btn");
-                let removeButtonImg = document.createElement('img');
-                removeButtonImg.src = "../../static/icons/close.svg";
-                removeButton.appendChild(removeButtonImg);
-                wrapper.appendChild(removeButton);
-
-                upload_photo.appendChild(wrapper);
-
-                removeButton.addEventListener('click', () => {
-                    picInput.value = null;
-                    while (wrapper.firstChild) {
-                        wrapper.removeChild(wrapper.firstChild);
-                    }
-                    while (upload_photo_card.firstChild) {
-                        upload_photo_card.removeChild(upload_photo_card.firstChild);
-                    }
-                    wrapper.style.display = "none";
-                    upload_photo_div.style.display = "flex";
-                    upload_photo_card.style.border = "1px dashed #cdbddb";
-                });
-                console.log('Изображение успешно загружено');
-            } else {
-                console.error('Произошла ошибка при загрузке изображения');
+        removeButton.addEventListener('click', () => {
+            picInput.value = null;
+            while (wrapper.firstChild) {
+                wrapper.removeChild(wrapper.firstChild);
             }
-        };
-        xhr.send(formData);
+            while (upload_photo_card.firstChild) {
+                upload_photo_card.removeChild(upload_photo_card.firstChild);
+            }
+            wrapper.style.display = "none";
+            upload_photo_div.style.display = "flex";
+            upload_photo_card.style.border = "1px dashed #cdbddb";
+        });
     }
 }
 
 function handleNameInput() {
     let inputString = nameInput.value;
     let label = document.querySelector('.main-body__registration__form__text-input__label[for="name"]');
-    if(inputString.length === 0 || (/[^a-zA-Zа-яА-Я ]/.test(inputString))) {
+    if(inputString.length === 0 || /[^A-Za-zА-Яа-я]/.test(inputString)) {
         nameInput.style.backgroundColor = "#fff2f2";
         nameInput.style.border = "1px solid #ff0000";
         nameInput.style.color = "#fb4c4c";
@@ -238,7 +248,7 @@ function handleAboutInput(){
                 expandButtonTxt.textContent = "Развернуть"
                 expandButtonTxt.style.margin = "0"
                 let expandButtonImg = document.createElement('img');
-                expandButtonImg.src = "../../static/icons/expand.svg";
+                expandButtonImg.src = "../../static//myApp/icons/expand.svg";
                 expandButton.appendChild(expandButtonTxt);
                 expandButton.appendChild(expandButtonImg);
                 wrap.appendChild(expandButton);

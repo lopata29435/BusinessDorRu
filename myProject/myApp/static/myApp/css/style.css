@@ -612,6 +612,9 @@ body{
 .main-body__next-button-wraper{
     display: flex;
     justify-content: end;
+    /* position: absolute;
+    top: 1100px;
+    right: 600px; */
 }
 .main-body__next-button{
     width: 220px;

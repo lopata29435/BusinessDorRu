@@ -2,12 +2,13 @@ from django.urls import path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import UserProfileAPIView
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
-    path('registration/', views.create_user_profile, name='registration'),
-    path('user_profile_created/', views.user_profile_created, name='user_profile_created'),
-
+    path('registration/', UserProfileAPIView.as_view(), name='registration'),
 ]
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

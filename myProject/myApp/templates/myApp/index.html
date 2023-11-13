@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../static/css/style.css">
+        <link rel="stylesheet" href="../../static/myApp/css/style.css">
         <title>Hw_1</title>
     </head>
     <body>
         <div class = "base">
             <header class = "head">
                 <div class = "head__logo">
-                    <img src = "../../static/img/logo.svg" alt = "logo"/>
+                    <img src = "../../static/myApp/img/logo.svg" alt = "logo"/>
                     <button class = "head__logo__exit-button">Выйти из аккаунта</button>
                 </div>
             </header>
@@ -31,7 +31,7 @@
                                 <div class = "main-body__registration__progress-sub-line"></div>
                             </div>
                         </div>
-                        <form method="post" enctype="multipart/form-data">
+                        <form id="userProfileForm" enctype="multipart/form-data">
                             {% csrf_token %}
                             <div class = "main-body__registration__form">
                                 <section class = "main-body__registration__form__data-upload">
@@ -42,7 +42,7 @@
                                                 <label for="file_upload" class="main-body__registration__form__data-upload__upload-photo__button">
                                                     Загрузить
                                                 </label>
-                                                <input id="file_upload" type="file" class = "main-body__registration__form__data-upload__upload-photo__input" type="file" name="photo"/>
+                                                <input id="file_upload" type="file" class = "main-body__registration__form__data-upload__upload-photo__input" name="photo"/>
                                                 <p class = "main-body__registration__form__data-upload__upload-photo__ptext-after-input">Загрузите фотографию весом не более 10 мб</p>
                                             </label>
                                         </div>    
@@ -79,7 +79,7 @@
                                         <p class = "sub_title_header_3_style" style = "font-size: small;">Например: глаза уже плывут от этих скобочек и тегов</p>
                                     </div>
                                 </section>
-                                <section class = "main-body__registration__form__profile-create-card">
+                                <div class = "main-body__registration__form__profile-create-card">
                                     <p class = "main-body__registration__form__profile-create-card__ptext">Так будет выглядеть твоя будущая страница</p>
                                     <section class = "main-body__registration__form__profile-create-card__data">
                                         <div class = "main-body__registration__form__profile-create-card__data__card-photo-side">
@@ -102,10 +102,10 @@
                                         <div class="main-body__registration__form__profile-create-card__data__pereferences">
                                             <p class = "main-body__registration__form__profile-create-card__data__pereferences__ptext">Предпочтения по жилью</p>
                                             <div class="main-body__registration__form__profile-create-card__data__pereferences__price"></div>
-                                            <div calss = "main-body__registration__form__profile-create-card__data__pereferences__wraper-station">
+                                            <div class = "main-body__registration__form__profile-create-card__data__pereferences__wraper-station">
                                                 <div class = "main-body__registration__form__profile-create-card__data__pereferences__station"></div>
                                             </div>
-                                            <div calss = "main-body__registration__form__profile-create-card__data__pereferences__dividing-line"></div>
+                                            <div class = "main-body__registration__form__profile-create-card__data__pereferences__dividing-line"></div>
                                         </div>
                                     </div>
                                 </section>
@@ -117,17 +117,17 @@
                                             <p class = "main-body__registration__form__profile-create-advise__text__ptext-sub">Люди пишут тем, кому доверяют. Тем более при поиске соседа</p>        
                                         </div>    
                                         <div>
-                                            <img src = "../../static/icons/sad_icon.svg" alt = "sad"/>
+                                            <img src = "../../static/myApp/icons/sad_icon.svg" alt = "sad"/>
                                         </div>
                                     </div>
                                     
                                 </div>
-                            </section>   
-                        </div>
-                        <div class = "main-body__next-button-wraper">
-                            <button class = "main-body__next-button" type="submit">Продолжить</button>
-                        </div>
-                    </form>
+                                <div class = "main-body__next-button-wraper">
+                                    <button class = "main-body__next-button" type="submit" onclick="postData(event)">Продолжить</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>           
             </main>
 
@@ -146,8 +146,8 @@
                                     <p>Политика конфидециальности</p>
                                 </div>    
                                 <div class = "footer__data__contacts__additional-data___icons">
-                                    <img src = "../../static/icons/tg.svg" alt = "Tg"/>
-                                    <img src = "../../static/icons/vk.svg" alt = "VK"/>
+                                    <img src = "../../static/myApp/icons/tg.svg" alt = "Tg"/>
+                                    <img src = "../../static/myApp/icons/vk.svg" alt = "VK"/>
                                 </div>
                             </div>
                         </div>
@@ -161,6 +161,6 @@
                 </div>
             </footer>
         </div>
-        <script src = "../../static/js/script1.js"></script>   
+        <script src = "../../static/myApp/js/script1.js"></script>   
     </body>
 </html>

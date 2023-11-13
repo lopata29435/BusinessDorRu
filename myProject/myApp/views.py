@@ -1,21 +1,23 @@
-from django.shortcuts import render, redirect
-from .forms import UserProfileForm
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from . import models, serializers
+from django.shortcuts import render
+import logging
 
-@csrf_exempt
-def create_user_profile(request):
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST, request.FILES)
-        if form.is_valid():
-            user_profile = form.save(commit=False)  
-            user_profile.photo = request.FILES['photo']
-            user_profile.save()
+class UserProfileAPIView(APIView):
+    serializer_class = serializers.UserProfileSerializer
 
-            return redirect('user_profile_created')
-    else:
-        form = UserProfileForm()
+    def get(self, request):
+        return render(request, "index.html")
 
-    return render(request, 'myApp/index.html', {'form': form})
+    def post(self, request):
+        serializer = self.serializer_class(data=request.data, files=request.FILES)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-def user_profile_created(request):
-    return render(request, 'myApp/index2.html')
