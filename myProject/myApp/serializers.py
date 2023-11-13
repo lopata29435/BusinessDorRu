@@ -5,3 +5,5 @@ class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
         fields = ['name', 'gender', 'year_of_birth', 'tg', 'phone', 'about_ur_self', 'photo']
+    
+    photo = serializers.ImageField(required=False)

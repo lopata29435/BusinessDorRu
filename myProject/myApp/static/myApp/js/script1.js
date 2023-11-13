@@ -6,25 +6,32 @@ const telInput = document.querySelector("#phone");
 const tgInput = document.querySelector("#tg");
 const aboutInput = document.querySelector("#about_ur_self");
 
+function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith(name + '=')) {
+            return cookie.substring(name.length + 1);
+        }
+    }
+    return '';
+}
+
 function postData(event) {
     event.preventDefault();
-    const formData = new FormData();
-    const formElements = document.querySelectorAll('#userProfileForm input');
-
-    formElements.forEach(element => {
-        const name = element.name;
-        const value = element.type === 'file' ? element.files[0] : element.value;
-        formData.append(name, value);
-    });
+    const formData = new FormData(document.querySelector("#userProfileForm"));
+    const csrftoken = getCookie('csrftoken');
+    
     fetch('/myApp/registration/', {
         method: 'POST',
+        headers: {
+            'X-CSRFToken': csrftoken
+        },
         body: formData,
-
     })
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        alert('Item saved successfully!');
         document.querySelector("#userProfileForm").reset();
     })
     .catch(error => {
